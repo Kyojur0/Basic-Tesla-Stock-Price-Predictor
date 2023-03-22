@@ -1,0 +1,30 @@
+                             {% extends "base.html" %}
+
+{% block content %}
+  <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Open Value</th>
+        <th>Close Value</th>
+        <th>High Ticket</th>
+        <th>Low Ticket</th>
+        <th>Volume of Stock</th>
+        <th>Predicted Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in users %}
+        <tr>
+          <td>{{ user[0] }}</td>
+          <td>{{ user[1] }}</td>
+          <td>{{ user[2] }}</td>
+          <td>{{ user[3] }}</td>
+          <td>{{ user[4] }}</td>
+          <td>{{ user[5] }}</td>
+          <td>{{ user[6] }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
